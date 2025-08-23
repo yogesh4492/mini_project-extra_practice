@@ -112,6 +112,8 @@ elif gender=='f' or gender=='F':
 else:
     discount=0.25
 
+total_discount=total_gold_amount*discount
+total_gross_bill=total_Amount-total_discount
 print(f"Name= {name}")
 print(f"Gender(M/F)= {gender}")
 print(f"Age= {age}")
@@ -120,26 +122,18 @@ print(f" Product = {product}")
 print(f" Product Weight= {product_weight} Gram")
 print()
 print(f"current gold Price = {Current_gold_price}(Per 1 Gram)")
-print()
-print(" ---------------------------------------------- ")
 print(f"total_gold_amount= {total_gold_amount}")
-print()
 print("--------------------------------------")
 print(f"Making Charge ={making_charge}(per 1 gram)")
 print()
 print(f"total_Making_charge= {total_m_c}")
-print()
 print("-------------------------------------")
 print(f"total amount= {total_Amount}")
-print()
 print("--------------------------------------")
 print(f"Discount= {discount} % ")
-total_discount=total_gold_amount*discount
 print(f"total Discount= {total_discount}")
-print()
 print("--------------------------------------")
 print()
-total_gross_bill=total_Amount-total_discount
 print(f"total_gross_amount= {total_gross_bill}")        
 print()
 print("--------------------------------------")
