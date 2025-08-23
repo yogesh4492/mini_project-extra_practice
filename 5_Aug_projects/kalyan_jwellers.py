@@ -65,32 +65,20 @@ name=input("Enter Your Name= ")
 gender=input("Enter Your Gender (M/F):  ")
 age=int(input("Enter Your Age= "))
 
-product=input("Enter Product= ")
+product=input("Enter Product name= ")
 product_weight=int(input("Enter Product Gram= "))
+print()
+print("--------Kalyan Jwellers Bill ----------")
+print()
 Current_gold_price=5752
-print(f"current gold Price = {Current_gold_price}(Per 1 Gram)")
-
-print(" ---------------------------------------------- ")
 total_gold_amount=5752*product_weight
-print(f"total_gold_amount= {total_gold_amount}")
-print()
-print("--------------------------------------")
-print()
  
 making_charge=845
-print(f"Making Charge ={making_charge}(per 1 gram)")
+
 total_m_c=making_charge*product_weight
-print(f"total_Making_charge= {total_m_c}")
-print()
-print("-------------------------------------")
-print()
+
 total_Amount=total_gold_amount+total_m_c
-print(f"total amount= {total_Amount}")
-print()
 
-print("--------------------------------------")
-
-discount=0.25
 if gender=='m' or gender=='M':
     if age>=65:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
@@ -121,9 +109,30 @@ elif gender=='f' or gender=='F':
             discount=0.25
         elif total_gold_amount>51000:
             discount=0.30
+else:
+    discount=0.25
 
-
+print(f"Name= {name}")
+print(f"Gender(M/F)= {gender}")
+print(f"Age= {age}")
 print()
+print(f" Product = {product}")
+print(f" Product Weight= {product_weight} Gram")
+print()
+print(f"current gold Price = {Current_gold_price}(Per 1 Gram)")
+print()
+print(" ---------------------------------------------- ")
+print(f"total_gold_amount= {total_gold_amount}")
+print()
+print("--------------------------------------")
+print(f"Making Charge ={making_charge}(per 1 gram)")
+print()
+print(f"total_Making_charge= {total_m_c}")
+print()
+print("-------------------------------------")
+print(f"total amount= {total_Amount}")
+print()
+print("--------------------------------------")
 print(f"Discount= {discount} % ")
 total_discount=total_gold_amount*discount
 print(f"total Discount= {total_discount}")
