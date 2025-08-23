@@ -68,7 +68,7 @@ age=int(input("Enter Your Age= "))
 product=input("Enter Product= ")
 product_weight=int(input("Enter Product Gram= "))
 Current_gold_price=5752
-print(f"current gold Price = {Current_gold_price}")
+print(f"current gold Price = {Current_gold_price}(Per 1 Gram)")
 
 print(" ---------------------------------------------- ")
 total_gold_amount=5752*product_weight
@@ -78,6 +78,7 @@ print("--------------------------------------")
 print()
  
 making_charge=845
+print(f"Making Charge ={making_charge}(per 1 gram)")
 total_m_c=making_charge*product_weight
 print(f"total_Making_charge= {total_m_c}")
 print()
@@ -89,45 +90,47 @@ print()
 
 print("--------------------------------------")
 
-discount=0.25
+discount=25
 if gender=='m' or gender=='M':
     if age>=65:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=total_gold_amount*0.20
+            discount=20
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=total_gold_amount*0.30
+            discount=30
         elif total_gold_amount>51000:
-            discount=total_gold_amount*0.35
+            discount=35
     else:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=total_gold_amount*0.10
+            discount=10
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=total_gold_amount*0.20
+            discount=20
         elif total_gold_amount>51000:
-            discount=total_gold_amount*0.25
+            discount=25
 elif gender=='f' or gender=='F':
     if age>=65:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=total_gold_amount*0.25
+            discount=25
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=total_gold_amount*0.35
+            discount=35
         elif total_gold_amount>51000:
-            discount=total_gold_amount*0.40
+            discount=40
     else:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=total_gold_amount*0.15
+            discount=15
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=total_gold_amount*0.25
+            discount=25
         elif total_gold_amount>51000:
-            discount=total_gold_amount*0.30
+            discount=30
 
 
 print()
-print(f"total Discount= {discount}")
+print(f"Discount= {discount} % ")
+total_discount=total_gold_amount/discount
+print(f"total Discount= {total_discount}")
 print()
 print("--------------------------------------")
 print()
-total_gross_bill=total_Amount-discount
+total_gross_bill=total_Amount-total_discount
 print(f"total_gross_amount= {total_gross_bill}")        
 print()
 print("--------------------------------------")
