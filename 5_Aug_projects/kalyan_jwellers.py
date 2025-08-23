@@ -90,42 +90,42 @@ print()
 
 print("--------------------------------------")
 
-discount=25
+discount=0.25
 if gender=='m' or gender=='M':
     if age>=65:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=20
+            discount=0.20
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=30
+            discount=0.30
         elif total_gold_amount>51000:
-            discount=35
+            discount=0.35
     else:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=10
+            discount=0.10
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=20
+            discount=0.20
         elif total_gold_amount>51000:
-            discount=25
+            discount=0.25
 elif gender=='f' or gender=='F':
     if age>=65:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=25
+            discount=0.25
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=35
+            discount=0.35
         elif total_gold_amount>51000:
-            discount=40
+            discount=0.40
     else:
         if total_gold_amount>=21000 and total_gold_amount<=31000:
-            discount=15
+            discount=0.15
         elif total_gold_amount>31000 and total_gold_amount<=51000:
-            discount=25
+            discount=0.25
         elif total_gold_amount>51000:
-            discount=30
+            discount=0.30
 
 
 print()
 print(f"Discount= {discount} % ")
-total_discount=total_gold_amount/discount
+total_discount=total_gold_amount*discount
 print(f"total Discount= {total_discount}")
 print()
 print("--------------------------------------")
